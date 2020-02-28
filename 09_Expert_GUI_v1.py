@@ -9,6 +9,19 @@ class Converter:
         # Formatting variables
         background_color = "light blue"
 
+        #In actual program this is blank and is populated with user calculations
+        self.all_calc_list = ['0 degrees C is -17.8 degrees F',
+                              '0 degrees C is 32 degrees F',
+                              '40 degrees C is 104 degrees F',
+                              '40 degrees C is 4.4 degrees F',
+                              '12 degrees C is 53.6 degrees F',
+                              '24 degrees C is 75.2 degrees F',
+                              '100 degrees C is 37.8 degrees F']
+
+
+        # Initialise list to hold calculation history
+        self.all_calculations = []
+
         # Converter Frame
         self.converter_frame = Frame(bg=background_color,
                                      pady=10)
@@ -108,7 +121,11 @@ class Converter:
             else:
                 self.converted_label.configure(text=answer, fg="red")
                 self.to_convert_entry.configure(bg=error)
+
             # Add Answer to list for History
+            if answer != "Too Cold":
+                self.all_calculations.append(answer)
+                print(self.all_calculations)
 
         except ValueError:
             self.converted_label.configure(text="Enter a number!!", fg="red")
