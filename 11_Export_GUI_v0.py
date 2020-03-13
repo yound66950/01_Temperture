@@ -38,7 +38,7 @@ class Converter:
 
 if __name__ == '__main__':
     class History:
-        def __init__(self, partner, calc_history):
+        def __init__(self, partner, calc_export):
 
             background = "#a9ef99"  # Pale green
 

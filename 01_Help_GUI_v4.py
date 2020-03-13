@@ -54,7 +54,8 @@ if __name__ == '__main__':
             self.help_frame.grid()
 
             # Set up Help heading (row 0)
-            self.how_heading = Label(self.help_frame, text="Help / Instructions",
+            self.how_heading = Label(self.help_frame,
+                                     text="Help / Instructions",
                                      font="arial 14 bold", bg=background)
             self.how_heading.grid(row=0)
 
